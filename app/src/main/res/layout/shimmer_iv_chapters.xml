@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cvItemView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/_2sdp"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/_5sdp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg_iv_chapters"
+        android:padding="@dimen/_5sdp"
+        >
+        <TextView
+            android:id="@+id/tvChapterNumber"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_shimmer"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/orange"
+            />
+        <TextView
+            android:id="@+id/tvChapterTitle"
+            android:layout_width="@dimen/_130sdp"
+            android:background="@drawable/bg_shimmer"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp"
+            />
+        <TextView
+            android:id="@+id/tvChapterDescription"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:ellipsize="end"
+            android:background="@drawable/bg_shimmer"
+            android:maxLines="4"
+            android:textColor="#696969"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_7sdp"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/bg_shimmer"
+      />
+
+            <TextView
+                android:id="@+id/tvVersesCount"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shimmer"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

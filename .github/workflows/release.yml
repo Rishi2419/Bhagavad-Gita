@@ -1,0 +1,60 @@
+name: AndroidBuild
+
+on:
+  pull_request :
+    branches : [master]
+  push :
+    branches : [ master ]
+
+
+jobs:
+  build:
+    name: Building The Project
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+
+      - name : Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+
+      - name: Bump Version
+        uses: chkfung/android-version-actions@v1.2.3
+        with:
+          gradlePath: app/build.gradle.kts
+          versionCode: ${{ github.run_number }}
+
+      - name: Build Release AAB
+        run: ./gradlew bundleRelease
+
+
+      - name: Sign Release
+        id: sign
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: app/release
+          signingKeyBase64: ${{ secrets.KEYSTORE_FILE }}
+          alias: ${{ secrets.SIGNING_KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.SIGNING_KEY_PASSWORD }}
+
+      - name : Setup Authorization
+        run: echo '${{ secrets.SERVICE_JSON }}' > service_account.json
+
+
+      - name: Publish to Play Store
+        uses: r0adkll/upload-google-play@v1.1.3
+        with:
+          serviceAccountJson: service_account.json
+          packageName: com.geeta.bhagwatgita
+          releaseFiles: app/release/app-release.aab
+          track: production
+          status : 'completed'
+          whatsNewDirectory : whatNew/

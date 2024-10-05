@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.VerseFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/llTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+                        android:id="@+id/llBhagwatGita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_50sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/kalash"
+                            />
+                        <TextView
+                            android:id="@+id/tvChapterNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shree Bhagavat Gita"
+                            android:textStyle="bold"
+                            android:layout_marginHorizontal="@dimen/_2sdp"
+                            android:textSize="@dimen/_20ssp"
+                            android:textColor="@color/orange"
+                            />
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/kalash"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/llBhagwatGita"
+                        >
+                        <ImageView
+                            android:id="@+id/ivFavoriteVerse"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:visibility="visible"
+                            android:src="@drawable/baseline_favorite_border_24"
+                            app:tint="@color/orange"
+                            />
+                        <ImageView
+                            android:id="@+id/ivFavoriteVerseFilled"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:visibility="gone"
+                            android:src="@drawable/baseline_favorite_24"
+                            app:tint="@color/orange"
+                            />
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/orange"
+                    app:layout_anchor="@id/llBhagwatGita"
+                    app:indicatorColor="@color/orange"
+                    app:trackColor="#F8D6C9"
+                    app:layout_anchorGravity="bottom"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:id="@+id/tvVerseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="||1.6||"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_17sdp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/ivPlay"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/baseline_play_circle_outline_24"
+                        app:tint="@color/orange"
+                        android:visibility="visible"
+                        />
+                    <ImageView
+                        android:id="@+id/ivPause"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/baseline_pause_circle_24"
+                        app:tint="@color/orange"
+                        android:visibility="gone"
+                        />
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:indeterminateTint="@color/orange"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvVerseText"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:text="युधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान्। सौभद्रो द्रौपदेयाश्च सर्व एव महारथाः"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/orange"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    />
+                <TextView
+                    android:id="@+id/tvTransliterationIfEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="adhaśh chordhvaṁ prasṛitās tasya śhākhā guṇa-pravṛiddhā viṣhaya-pravālāḥ adhaśh cha mūlāny anusantatāni karmānubandhīni manuṣhya-loke"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11ssp"
+                    />
+                <TextView
+                    android:id="@+id/tvWordIfEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="adhaḥ—downward; cha—and; ūrdhvam—upward; prasṛitāḥ—extended; tasya—its; śhākhāḥ—branches; guṇa—modes of material nature; pravṛiddhāḥ—nourished; viṣhaya—objects of the senses; pravālāḥ—buds; adhaḥ—downward; cha—and; mūlāni—roots; anusantatāni—keep growing; karma—actions; anubandhīni—bound; manuṣhya-loke—in the world of humans"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11ssp"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:visibility="gone"
+                    android:id="@+id/view"
+                    android:src="@drawable/verse_view"
+                    />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:src="@drawable/krsna"
+                android:scaleType="centerInside"
+                android:alpha="0.15"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/llBottom"
+                android:background="@android:color/transparent" />
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llTop"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <TextView
+                    android:id="@+id/tvTranslation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Translations"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clTranslation"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_verse_card"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_5sdp"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvAuthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Author"
+                                android:textColor="#575656"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  :  "
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvAuthorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Swami Sivananda"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:text="Its branches spread below and above, nourished by the Gunas; its buds are sense-objects, and its roots stretch forth below in the world of men, originating action."
+                            android:textSize="@dimen/_13ssp"
+                            />
+
+                    </LinearLayout>
+
+                    <!--            when added shaeAppearance then android tint works ow app tint for icon color-->
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabTranslationRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        app:tint="@color/white"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:backgroundTint="@color/orange"
+                        />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabTranslationLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        android:background="@drawable/bg_fab"
+                        android:src="@drawable/baseline_keyboard_arrow_left_24"
+                        app:tint="@color/white"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:backgroundTint="@color/orange"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvCommentries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Commentary"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCommentries"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/llCommentry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_verse_card"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_5sdp"
+                            >
+                            <TextView
+                                android:id="@+id/tvAuthorCommentary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Author"
+                                android:textColor="#575656"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvArrowCommentary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  :  "
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvAuthorNameCommentary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Swami Sivananda"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_10ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvTextCommentary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:maxLines="3"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Its branches spread below and above, nourished by the Gunas; its buds are sense-objects, and its roots stretch forth below in the world of men, originating action."
+                            android:textSize="@dimen/_13ssp"
+                            />
+                        <TextView
+                            android:id="@+id/tvSeeMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:text="Read More..."
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:textColor="#0051F4"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </LinearLayout>
+
+                    <!--            when added shaeAppearance then android tint works ow app tint for icon color-->
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCommentaryRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/llCommentry"
+                        app:layout_constraintEnd_toEndOf="@+id/llCommentry"
+                        app:layout_constraintTop_toBottomOf="@+id/llCommentry"
+                        android:background="@drawable/bg_fab"
+                        android:src="@drawable/baseline_keyboard_arrow_right_24"
+                        app:tint="@color/white"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:backgroundTint="@color/orange"
+                        />
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCommentryLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/llCommentry"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/llCommentry"
+                        app:layout_constraintTop_toBottomOf="@+id/llCommentry"
+                        android:background="@drawable/bg_fab"
+                        android:src="@drawable/baseline_keyboard_arrow_left_24"
+                        app:tint="@color/white"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:backgroundTint="@color/orange"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvShowingMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="No internet connection! \n Check for saved verses in settings"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_200sdp"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/orange"
+                    />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
