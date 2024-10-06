@@ -83,18 +83,6 @@ class SettingsFragment : Fragment() {
         }
     }
 
-//    private fun settingTheme() {
-//        binding.switchTheme.setOnCheckedChangeListener{buttonView , checked ->
-//
-//            if(checked){
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//            }
-//            else{
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//
-//            }
-//        }
-//    }
 
     private fun goingToSavedVerseFragment() {
         binding.llSavedVerses.setOnClickListener {

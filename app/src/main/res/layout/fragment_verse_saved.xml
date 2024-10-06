@@ -24,26 +24,26 @@
             app:layout_constraintEnd_toEndOf="parent"
 
             >
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:src="@drawable/kalash"
-                />
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/_15sdp"-->
+<!--                android:layout_height="@dimen/_15sdp"-->
+<!--                android:src="@drawable/kalash"-->
+<!--                />-->
             <TextView
                 android:id="@+id/tvChapterNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shree Bhagavat Gita"
+                android:text="||| Shrimad Bhagavad Gita ||"
                 android:textStyle="bold"
                 android:layout_marginHorizontal="@dimen/_2sdp"
                 android:textSize="@dimen/_20ssp"
                 android:textColor="@color/orange"
                 />
-            <ImageView
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:src="@drawable/kalash"
-                />
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/_15sdp"-->
+<!--                android:layout_height="@dimen/_15sdp"-->
+<!--                android:src="@drawable/kalash"-->
+<!--                />-->
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

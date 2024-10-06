@@ -39,26 +39,26 @@
                         app:layout_constraintEnd_toEndOf="parent"
 
                         >
-                        <ImageView
-                            android:layout_width="@dimen/_15sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:src="@drawable/kalash"
-                            />
+<!--                        <ImageView-->
+<!--                            android:layout_width="@dimen/_15sdp"-->
+<!--                            android:layout_height="@dimen/_15sdp"-->
+<!--                            android:src="@drawable/kalash"-->
+<!--                            />-->
                         <TextView
                             android:id="@+id/tvChapterNumber"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Shree Bhagavat Gita"
+                            android:text="|| Shrimad Bhagavad Gita ||"
                             android:textStyle="bold"
                             android:layout_marginHorizontal="@dimen/_2sdp"
                             android:textSize="@dimen/_20ssp"
                             android:textColor="@color/orange"
                             />
-                        <ImageView
-                            android:layout_width="@dimen/_15sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:src="@drawable/kalash"
-                            />
+<!--                        <ImageView-->
+<!--                            android:layout_width="@dimen/_15sdp"-->
+<!--                            android:layout_height="@dimen/_15sdp"-->
+<!--                            android:src="@drawable/kalash"-->
+<!--                            />-->
                     </LinearLayout>
 
 
@@ -73,16 +73,16 @@
                         >
                         <ImageView
                             android:id="@+id/ivFavoriteVerse"
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_30sdp"
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
                             android:visibility="visible"
                             android:src="@drawable/baseline_favorite_border_24"
                             app:tint="@color/orange"
                             />
                         <ImageView
                             android:id="@+id/ivFavoriteVerseFilled"
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_30sdp"
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
                             android:visibility="gone"
                             android:src="@drawable/baseline_favorite_24"
                             app:tint="@color/orange"
@@ -196,18 +196,32 @@
 
             <ImageView
                 android:id="@+id/backgroundImage"
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_200sdp"
-                android:src="@drawable/krsna"
-                android:scaleType="centerInside"
-                android:alpha="0.15"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="@dimen/_300sdp"
+                android:src="@drawable/jointpeacock"
+                android:alpha="0.3"
+                android:foregroundGravity="center"
                 android:visibility="gone"
-                android:layout_marginTop="@dimen/_30sdp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="@dimen/_100sdp"
+                app:layout_constraintTop_toTopOf="@id/llTop"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/llBottom"
+                app:layout_constraintBottom_toTopOf="@+id/llBottom"
                 android:background="@android:color/transparent" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/backgroundImage2"-->
+<!--                android:layout_width="@dimen/_200sdp"-->
+<!--                android:layout_height="@dimen/_200sdp"-->
+<!--                android:src="@drawable/peacock_right"-->
+<!--                android:alpha="0.9"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintTop_toTopOf="@id/llTop"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/llBottom"-->
+<!--                android:background="@android:color/transparent" />-->
+
+
             <LinearLayout
                 android:id="@+id/llBottom"
                 android:layout_width="match_parent"
@@ -225,7 +239,7 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     android:visibility="gone"
-                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
                     android:textSize="@dimen/_15ssp"
                     android:textColor="@color/black"
                     android:layout_marginTop="@dimen/_10sdp"
@@ -334,7 +348,7 @@
                     android:text="Commentary"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
                     android:textSize="@dimen/_15ssp"
                     android:textColor="@color/black"
                     android:layout_marginTop="@dimen/_10sdp"

@@ -20,7 +20,6 @@ import retrofit2.Response
 
 class AppRepository(private val englishChapterDao: EnglishChapterDao, val englishVerseDao: EnglishVerseDao , val sharedPreferencesManager: SharedPreferencesManager) {
 
-//    fun getChapters() : Flow<ChaptersItem> = implRemoteDataSource.getChapter()
 
     fun getChapter(): Flow<List<ChaptersItem>> = callbackFlow {
         val callback = object : Callback<List<ChaptersItem>> {

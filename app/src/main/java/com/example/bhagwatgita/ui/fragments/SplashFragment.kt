@@ -41,12 +41,12 @@ class SplashFragment : Fragment() {
         rotationAnimator.interpolator = LinearInterpolator() // Linear interpolation
 
         // Start the animation
-        rotationAnimator.start()
+//        rotationAnimator.start()
         return binding.root
     }
     private fun setStatusBarColor() {
         activity?.window?.apply {
-            val statusBarColors = ContextCompat.getColor(requireContext(), R.color.splash)
+            val statusBarColors = ContextCompat.getColor(requireContext(), R.color.white)
             statusBarColor = statusBarColors
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR

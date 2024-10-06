@@ -47,59 +47,9 @@ class HomeFragment : Fragment() {
 
         goingToSettingsFragment()
 
-        getVerseOfTheDay()
         return binding.root
     }
 
-    private fun getVerseOfTheDay() {
-        val chapterNumber = (1..18).random()
-        val verseNumber = (1..20).random()
-        val verse = viewModel.getVerseOfTheDay()
-        if(verse.isNotEmpty()){
-            for ((key, value) in verse) {
-                val previousTime = key.toLong()
-                val currentTime = System.currentTimeMillis()
-                val timeDifference = currentTime - previousTime
-                if (timeDifference > 24 * 60 * 60 * 1000){
-                    getVerseOfTheDayFromAPI(chapterNumber, verseNumber)
-                }
-                else{
-                    //binding.tvVerseOfTheDay.text = value.toString()
-                }
-            }
-        }
-        else{
-            getVerseOfTheDayFromAPI(chapterNumber,verseNumber)
-        }
-    }
-
-    private fun getVerseOfTheDayFromAPI(chapterNumber : Int, verseNumber : Int){
-        val networkManager = NetworkManager(requireContext())
-
-        networkManager.observe(viewLifecycleOwner){
-            if(it == true){
-                lifecycleScope.launch {
-                    viewModel.getParticularVerse(chapterNumber,verseNumber).collect{
-                        val verseItem = it
-                        for(verse in verseItem.translations){
-                            if(verse.language == "english"){
-                                viewModel.deleteVerseOfTheDay("")
-                                viewModel.putVerseOfTheDay("${System.currentTimeMillis()}" , verse.description)
-                                //binding.tvVerseOfTheDay.text = verse.description
-                                break
-                            }
-                        }
-                    }
-                }
-            }
-            else{
-                val verse = viewModel.getVerseOfTheDay()
-                for ((key, value) in verse) {
-                    //binding.tvVerseOfTheDay.text = value.toString()
-                }
-            }
-        }
-    }
 
     private fun observeNetworkConnectivity() {
         val networkManager = NetworkManager(requireContext())

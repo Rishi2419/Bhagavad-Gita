@@ -81,7 +81,7 @@ class SavedChapterFragment : Fragment() {
             if(chaptersList.isEmpty()){
                 binding.shimmer.visibility = View.GONE
                 binding.rvChapters.visibility = View.GONE
-                binding.tvShowingMessage.visibility = View.VISIBLE
+                binding.tvShowingMessage.visibility = View.GONE
             }
 
             adapterChapter = AdapterChapter(requireActivity(),

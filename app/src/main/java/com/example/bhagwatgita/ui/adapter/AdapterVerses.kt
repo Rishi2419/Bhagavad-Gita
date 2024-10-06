@@ -62,14 +62,7 @@ class AdapterVerses(
                 tvVerseNumber.text = "Verse ${verse.chapterNumber}.${verse.verseNumber}"
             }
             tvVerse.text = verse.verse
-//            val verses = verse.translations
-//            for(i in verses){   // 0 to 6
-//                val firstVerse = i.language
-//                if(firstVerse == "english"){
-//                    tvVerse.text = i.description
-//                    break
-//                }
-//            }
+
         }
 
         holder.binding.ll.setOnClickListener {

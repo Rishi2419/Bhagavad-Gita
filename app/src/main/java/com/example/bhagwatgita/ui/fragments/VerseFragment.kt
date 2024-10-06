@@ -429,7 +429,7 @@ class VerseFragment() : Fragment() {
     }
     override fun onPause() {
         super.onPause()
-        textToSpeechManager.stop(true) // Stop the speech when the fragment goes into the background
+        textToSpeechManager.stop(true)
     }
 
 }

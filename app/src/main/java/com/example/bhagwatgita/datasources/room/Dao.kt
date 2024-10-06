@@ -17,9 +17,6 @@ interface EnglishChapterDao {
     @Query("SELECT  * FROM ChaptersInEnglish")
     fun getAllEnglishChapters() : LiveData<List<ChaptersInEnglish>>
 
-//    @Query("DELETE FROM ChaptersInEnglish")
-//    suspend fun deleteAllEnglishChapter()
-
     @Query("DELETE FROM ChaptersInEnglish WHERE id = :id")
     suspend fun deleteOneEnglishChapter(id : Int)
 

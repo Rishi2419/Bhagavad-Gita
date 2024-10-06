@@ -14,6 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg"
         >
         <LinearLayout
             android:id="@+id/ll"
@@ -27,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:background="@drawable/chapter_selector"
-            android:padding="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,8 +70,8 @@
                     >
                     <ImageView
                         android:id="@+id/ivFavoriteFilled"
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
                         android:src="@drawable/baseline_favorite_24"
                         app:tint="@color/orange"
                         android:visibility="gone"
@@ -78,8 +79,8 @@
                         />
                     <ImageView
                         android:id="@+id/ivFavorite"
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
                         android:src="@drawable/baseline_favorite_border_24"
                         app:tint="@color/orange"
                         android:visibility="visible"
@@ -96,7 +97,7 @@
                 android:text="The first chapter of the Bhagavad Gita - Arjuna Vishada Yoga introduces the setup, the setting, the characters and the circumstances that led to the epic battle of Mahabharata, fought between the Pandavas and the Kauravas. It outlines the reasons that led to the revelation of the of Bhagavad Gita. As both armies stand ready for the battle, the mighty warrior Arjuna, on observing the warriors on both sides becomes increasingly sad and depressed due to the fear of losing his relatives and friends and the consequent sins attributed to killing his own relatives. So, he surrenders to Lord Krishna, seeking a solution. Thus, follows the wisdom of the Bhagavad Gita."
                 android:ellipsize="end"
                 android:maxLines="4"
-                android:textColor="@color/chapterDetail"
+                android:textColor="@color/black"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:textSize="@dimen/_12sdp"
                 />
@@ -137,38 +138,40 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/backgroundImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/up_left"
-            android:scaleType="centerInside"
-            android:alpha="0.10"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@android:color/transparent" />
+<!--        <ImageView-->
+<!--            android:id="@+id/backgroundImage"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:alpha="0.10"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:src="@drawable/bg"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <ImageView
-            android:id="@+id/backgroundImage2"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:src="@drawable/up_right"
-            android:scaleType="centerInside"
-            android:alpha="0.3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@android:color/transparent" />
+<!--        <ImageView-->
+<!--            android:id="@+id/backgroundImage2"-->
+<!--            android:layout_width="@dimen/_100sdp"-->
+<!--            android:layout_height="@dimen/_100sdp"-->
+<!--            android:src="@drawable/up_right"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:alpha="0.3"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:background="@android:color/transparent" />-->
 
-        <ImageView
-            android:id="@+id/backgroundImage3"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:src="@drawable/down_left"
-            android:scaleType="centerInside"
-            android:alpha="0.5"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@android:color/transparent" />
+<!--        <ImageView-->
+<!--            android:id="@+id/backgroundImage3"-->
+<!--            android:layout_width="@dimen/_100sdp"-->
+<!--            android:layout_height="@dimen/_40sdp"-->
+<!--            android:src="@drawable/down_left"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:alpha="0.5"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:background="@android:color/transparent" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

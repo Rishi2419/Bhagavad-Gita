@@ -41,7 +41,7 @@ class TextToSpeechManager(private val context : Context) {
     fun speak(text : String){
         if(isInitialized){
             textToSpeech?.apply {
-                setSpeechRate(1.0f)
+                setSpeechRate(0.7f)
                 setPitch(0.8f)
                 speak(text,TextToSpeech.QUEUE_FLUSH, null,"")
             }
