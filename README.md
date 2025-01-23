@@ -28,7 +28,7 @@ Sync the Gradle dependencies.
 Set up Firebase by adding your google-services.json file to the project.
 Run the project on an emulator or a physical device.
 
-## For a visual walkthrough of Bhagavad Gita functionalities, check out the demo video here:
+### For a visual walkthrough of Bhagavad Gita functionalities, check out the demo video here:
 https://www.linkedin.com/posts/rishikesh-sahu-error_appdevelopment-androidstudio-kotlin-activity-7262847131701432321-oQd_?utm_source=share&utm_medium=member_desktop
 
 
