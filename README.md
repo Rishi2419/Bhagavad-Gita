@@ -17,7 +17,7 @@ Deepen your spiritual experience by listening to the verses recited through the 
 * **Android Studio:** The primary development environment used to build the app.
 * **Kotlin:** The modern programming language chosen for its efficiency and readability.
 * **XML:** Used for designing the app's user interface layouts.
-* **Figma: A design tool potentially used for creating mockups and designing the app's UI.
+* **Figma:** A design tool potentially used for creating mockups and designing the app's UI.
 
 ## Installation
 ### Clone the repository:
@@ -28,7 +28,7 @@ Sync the Gradle dependencies.
 Set up Firebase by adding your google-services.json file to the project.
 Run the project on an emulator or a physical device.
 
-## For a visual walkthrough of TeamUp!'s functionalities, check out the demo video here:
+## For a visual walkthrough of Bhagavad Gita functionalities, check out the demo video here:
 https://www.linkedin.com/posts/rishikesh-sahu-error_appdevelopment-androidstudio-kotlin-activity-7262847131701432321-oQd_?utm_source=share&utm_medium=member_desktop
 
 
