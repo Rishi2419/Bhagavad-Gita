@@ -17,7 +17,7 @@ Figma: A design tool potentially used for creating mockups and designing the app
 
 ## Installation
 ### Clone the repository:
-git clone https://github.com/Rishi2419/Team-Up-/tree/master
+https://github.com/Rishi2419/Bhagavad-Gita/tree/main
 
 Open the project in Android Studio.
 Sync the Gradle dependencies.
