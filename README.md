@@ -3,10 +3,14 @@ This Android application brings the timeless wisdom of the Bhagavad Gita to your
 
 ## Features:
 
-Complete Bhagavad Gita: Explore all 18 chapters and 700 verses with detailed translations, making the knowledge of the Gita accessible to a wider audience.
-Verse of the Day: Receive daily inspiration with a thoughtfully chosen verse delivered each morning.
-Offline Access: Save chapters and verses for offline reading and listening, ensuring you can connect with the Gita's teachings even without an internet connection.
-Text-to-Speech Functionality: Deepen your spiritual experience by listening to the verses recited through the app's text-to-speech feature.
+Complete Bhagavad Gita: 
+Explore all 18 chapters and 700 verses with detailed translations, making the knowledge of the Gita accessible to a wider audience.
+Verse of the Day: 
+Receive daily inspiration with a thoughtfully chosen verse delivered each morning.
+Offline Access: 
+Save chapters and verses for offline reading and listening, ensuring you can connect with the Gita's teachings even without an internet connection.
+Text-to-Speech Functionality: 
+Deepen your spiritual experience by listening to the verses recited through the app's text-to-speech feature.
 
 ## Tech Stack:
 
