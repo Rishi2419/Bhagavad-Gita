@@ -7,17 +7,17 @@ This Android application brings the timeless wisdom of the Bhagavad Gita to your
 Explore all 18 chapters and 700 verses with detailed translations, making the knowledge of the Gita accessible to a wider audience.
 * **Verse of the Day:**
 Receive daily inspiration with a thoughtfully chosen verse delivered each morning.
-Offline Access: 
+* **Offline Access: =**
 Save chapters and verses for offline reading and listening, ensuring you can connect with the Gita's teachings even without an internet connection.
-Text-to-Speech Functionality: 
+* **Text-to-Speech Functionality:**
 Deepen your spiritual experience by listening to the verses recited through the app's text-to-speech feature.
 
 ## Tech Stack:
 
-Android Studio: The primary development environment used to build the app.
-Kotlin: The modern programming language chosen for its efficiency and readability.
-XML: Used for designing the app's user interface layouts.
-Figma: A design tool potentially used for creating mockups and designing the app's UI.
+* **Android Studio:** The primary development environment used to build the app.
+* **Kotlin:** The modern programming language chosen for its efficiency and readability.
+* **XML:** Used for designing the app's user interface layouts.
+* **Figma: A design tool potentially used for creating mockups and designing the app's UI.
 
 ## Installation
 ### Clone the repository:
