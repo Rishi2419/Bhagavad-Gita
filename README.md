@@ -3,7 +3,7 @@ This Android application brings the timeless wisdom of the Bhagavad Gita to your
 
 ## Features:
 
-Complete Bhagavad Gita: 
+**Complete Bhagavad Gita:** 
 Explore all 18 chapters and 700 verses with detailed translations, making the knowledge of the Gita accessible to a wider audience.
 Verse of the Day: 
 Receive daily inspiration with a thoughtfully chosen verse delivered each morning.
