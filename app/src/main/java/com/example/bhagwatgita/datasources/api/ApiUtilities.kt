@@ -10,7 +10,7 @@ object ApiUtilities {
 
     private val headers = mapOf(
         "Accept" to "application/json",
-        "x-rapidapi-key" to "ed185712a4msha37d1ddafccf9b3p1746dfjsna050ae0633a6",
+        "x-rapidapi-key" to "YOUR API KEY",
         "x-rapidapi-host" to "bhagavad-gita3.p.rapidapi.com"
     )
 
