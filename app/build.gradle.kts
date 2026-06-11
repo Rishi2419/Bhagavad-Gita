@@ -18,6 +18,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    //11june
 //    signingConfigs {
 //        create("release") {
 //            storeFile = file(project.property("KEYSTORE_FILE").toString())
