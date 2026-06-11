@@ -33,7 +33,7 @@ android {
 //                // your configuration here
 //                signingConfig = signingConfigs.getByName(name)
 //            }
-            isMinifyEnabled = false
+            isMinifyEnabled  = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
